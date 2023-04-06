@@ -19,6 +19,7 @@ SELECT DISTINCT ?item ?itemLabel WHERE {
   SERVICE wikibase:label {
     bd:serviceParam wikibase:language "en".
   }
+}
 ```
 
 I'm pretty sure that for just getting it all I've used the first query in [this stackexchange reply](https://opendata.stackexchange.com/a/18523) and have removed duplicates using notepad++. I've removed them locally not because it was the better option but because I've already had the csv on my disk. Throwing distinct at it would also probably do the trick.
