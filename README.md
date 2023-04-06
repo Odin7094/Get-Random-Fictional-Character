@@ -14,15 +14,16 @@ This query results in charactersWithArticles.csv's content. It searches for char
 SELECT DISTINCT ?item ?itemLabel WHERE {
   ?article schema:about ?item ;
              schema:isPartOf <https://en.wikipedia.org/> .
-  # Item's type is: fictional character, or sub-type, or sub-sub-type, etc.
   ?item p:P31/ps:P31/wdt:P279* wd:Q95074.
   OPTIONAL{?item wdt:P1441 ?work}
   SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "en". # You can specify more languages.
+    bd:serviceParam wikibase:language "en".
   }
 ```
 
 I'm pretty sure that for just getting it all I've used the first query in [this stackexchange reply](https://opendata.stackexchange.com/a/18523) and have removed duplicates using notepad++. I've removed them locally not because it was the better option but because I've already had the csv on my disk. Throwing distinct at it would also probably do the trick.
+
+It's worth pointing out that quoted query is also something that started off as a copy-paste of some query from linked earlier stackexchange answer.
 
 ## What is it? How do I use it?
 C++ console app that uses CGI to output into browser. In practice I just change .exe to .cgi and put it behind xampp(cgi-bin, not htdocs) and print my data in html format. Here I just skipped everything but content-type and link tag, so it's probably incorrect if you care about having whole html structure in there but it prints anyway and I didn't care.(not that it's hard, just useless for the case)
