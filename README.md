@@ -1,6 +1,4 @@
 # getRandCharacter
-Get a random fictional character based on wikidata's exported characters.
-
 It is simple'n'all but if it was done I would've saved some bit of time so here it is for others. I might've been bad at searching tho.
 
 Another thing is I think it's a good thing to do to put wikidata csv exports here so their servers have it a bit easier and people don't need to trial'n'error select their database for this use-case.
