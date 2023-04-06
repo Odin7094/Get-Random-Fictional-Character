@@ -2,6 +2,7 @@
 Get a random fictional character based on wikidata's exported characters.
 
 It is simple'n'all but if it was done I would've saved some bit of time so here it is for others. I might've been bad at searching tho.
+
 Another thing is I think it's a good thing to do to put wikidata csv exports here so their servers have it a bit easier and people don't need to trial'n'error select their database for this use-case.
 
 ## DIY - Query
@@ -33,8 +34,12 @@ Output is a random entry from csv in amount equal 1 or whatever you input in GET
 If you want to recompile then the build.bat script just runs g++ that outputs file with cgi extension into the right folder.
 In one place in code there is one thing copied from [there](https://stackoverflow.com/a/600014) because I didn't remember how to quickly do that in cpp without parsing it myself.
 
+It is possible xammp's apache will need some .ini parameters switched to allow cgi execution but I don't remember if and how I did do that years ago. Google will have solution.
+
 ## Quick guide to use
-Place CSV in the same folder(.../xampp/cgi-bin for my case) as the .cgi, boot up your server(for me xampp cuz quick and easy) and enter through url.
+Place CSV in the same folder(.../xampp/cgi-bin for example) as the .cgi, boot up your server(for me xampp cuz quick and easy) and enter through url.
+
+It doesn't check if the file exists or anything and is set straight up in the code to open charactersWithArticles.csv so for quick """install""" use this file.
 
 ![UseExample](https://media.discordapp.net/attachments/321695978531061761/1093638925131726938/image.png)
 
